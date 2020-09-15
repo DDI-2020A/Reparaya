@@ -1,0 +1,33 @@
+#container1{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: 440px;
+    background: #b5afaf;  /* fallback for old browsers */
+
+
+}
+
+#Inicio {
+    text-align: center;
+}
+.parrafo{
+    text-align: left;
+}
+img{
+    height: 200px;
+    width: 200px;
+}
+#separador{
+    text-align: center;
+    color: white;
+}
+#sep{
+    background-color: black;
+}
+#separador2{
+    font-size: 26px;
+    color: white;
+    background-color: #1f7683;
+
+    text-align: center;
+}
