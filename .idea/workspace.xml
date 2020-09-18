@@ -10,7 +10,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0880a660-7dbe-4a2f-94a9-c19750fb4acc" name="Default Changelist" comment="" />
+    <list default="true" id="0880a660-7dbe-4a2f-94a9-c19750fb4acc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/pages/Formulario-Registro.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Formulario-Registro.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PaginaPerfil.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PaginaPerfil.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Sesion.js" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,7 +89,11 @@
       <workItem from="1599781467054" duration="1713000" />
       <workItem from="1600014717178" duration="11418000" />
       <workItem from="1600103199633" duration="6524000" />
-      <workItem from="1600134262967" duration="529000" />
+      <workItem from="1600134262967" duration="2756000" />
+      <workItem from="1600179135961" duration="6096000" />
+      <workItem from="1600306913205" duration="2501000" />
+      <workItem from="1600382722762" duration="1410000" />
+      <workItem from="1600447481689" duration="3141000" />
     </task>
     <servers />
   </component>
@@ -112,10 +124,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="309" y="42" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1600037349891" />
-    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600040889500">
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600153289896">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1600040889500" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1600153289896" />
     <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1599782714148">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -150,9 +162,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="390" y="0" width="585" height="801" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1598889184904" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1600119153835">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1600459917235">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1600119153835" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1600459917235" />
   </component>
 </project>

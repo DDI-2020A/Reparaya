@@ -20,7 +20,8 @@ const Navigation =()=> {
                     <div id="botones">
                         <form className="form-inline mt-2 mt-md-0 float-right" id="form">
 
-                            <Link to='/Sesion'><button className="btn btn-outline-success my-2 my-sm-2" type="primary-button">UNIRSE</button></Link>
+                            <Link to='/FormularioRegistro'><button className="btn btn-outline-success my-2 my-sm-2" type="primary-button">UNIRSE</button></Link>
+                            <a>   </a>
                             <Link to='/InicioSesion'><button className="btn btn-outline-success my-2 my-sm-2" type="primary-button">INICIA SESION </button></Link>
                         </form>
                     </div>

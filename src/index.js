@@ -6,7 +6,7 @@ import Contactanos from './pages/Contactanos';
 import './index.css';
 import Inicio from './pages/Inicio';
 import Privacidad from './pages/Privacidad';
-import Sesion from "./pages/Sesion";
+import FormularioRegistro from "./pages/Formulario-Registro";
 import PagPerfil from "./pages/PaginaPerfil";
 import InicioSesion from "./pages/InicioSesion";
 
@@ -20,7 +20,7 @@ ReactDOM.render(
                 <Route path='/contactanos' component={Contactanos}/>
                 <Route path='/InicioSesion' component={InicioSesion}/>
                 <Route path='/acerca' component={Acerca}/>
-                <Route path='/sesion' component={Sesion}/>
+                <Route path='/FormularioRegistro' component={FormularioRegistro}/>
                 <Route path='/perfil' component={PagPerfil}/>
                 <Route exact path='/' component={Inicio} />
 
