@@ -9,6 +9,7 @@ import Privacidad from './pages/Privacidad';
 import FormularioRegistro from "./pages/Formulario-Registro";
 import PagPerfil from "./pages/PaginaPerfil";
 import InicioSesion from "./pages/InicioSesion";
+import Buscador from "./pages/Buscador";
 import {auth} from "./Routers/firebase";
 
 function App(){
@@ -35,6 +36,7 @@ function App(){
 
                     {/* Páginas */}
                     <Route path='/privacidad' component={Privacidad} firebaseUser={firebaseUser}/>
+                    <Route path='/buscador' component={Buscador} firebaseUser={firebaseUser}/>
                     <Route path='/contactanos' component={Contactanos} firebaseUser={firebaseUser}/>
                     <Route path='/InicioSesion' component={InicioSesion} firebaseUser={firebaseUser}/>
                     <Route path='/acerca' component={Acerca} firebaseUser={firebaseUser}/>

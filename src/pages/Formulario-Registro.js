@@ -4,7 +4,7 @@ import './Formulario-Registro.css';
 import Footpage from "../components/Footpage";
 import React, { Fragment,useState} from 'react';
 import {withRouter,Link} from "react-router-dom";
-import {auth,db} from '../Routers/firebase';
+import {auth,dab} from '../Routers/firebase';
 const FormularioRegistro =(props)=>{
 
     const[email,setEmail]=useState('');
@@ -65,7 +65,7 @@ const FormularioRegistro =(props)=>{
                     email,contraseña)
                 props.history.push('/perfil');
 
-                await db.collection('usuarios').doc(res.user.email).set(
+                await dab.collection('usuarios').doc(res.user.email).set(
                     {
                         email: res.user.email,
                         uid:res.user.id

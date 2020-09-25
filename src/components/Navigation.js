@@ -33,6 +33,7 @@ const Navigation =(props)=> {
 
                             {props.firebaseUser!==null?(
                                 <Fragment>
+                                    <Link to='/Buscador'><button  className="btn btn-primary" type="button">BUSCAR</button></Link>
                                     <Link to="/perfil"><button className="btn btn-primary" type="button">PERFIL </button></Link>
                                 <button className="btn btn-primary" type="button"
                                 onClick={()=>cerrarSesion()}>CERRAR SESIÓN </button>
@@ -45,6 +46,7 @@ const Navigation =(props)=> {
                           (
 
                                     <Fragment>
+
                                         <Link to='/FormularioRegistro'><button  className="btn btn-primary" type="button">UNIRSE</button></Link>
                                         <Link to='/InicioSesion'><button  className="btn btn-primary" type="button">INICIA SESION </button></Link>
                                     </Fragment>
