@@ -7,6 +7,77 @@ import {withRouter} from "react-router-dom";
 const PagPerfil=(props)=>{
     const [publicacion,setPublicacion]=useState ([]);
     const [comentario,setComentario]=useState('');
+    const [modoEdicion,setModoEdicion]=useState(false);
+    const [id,setId]=useState('');
+    const eliminar=async (id)=>{
+        try{
+            await dab.collection('Publicaciones').doc(id).delete();
+
+            const arrayFiltrado=publicacion.filter(item=>item.id !==id);
+            setPublicacion(arrayFiltrado);
+        }catch(error){
+            console.log(error)
+        }
+    }
+    const activarEdicion=(item)=>{
+        setModoEdicion(true)
+        setComentario(item.Comentario)
+        setId(item.id)
+
+    }
+    const editar=async(e)=>{
+        e.preventDefault()
+        if(comentario.trim()){
+            console.log('vacio')
+            return
+        }
+        try{
+            await dab.collection('Publicaciones').doc(id).update(
+                {
+                    Comentario: comentario
+                }
+            )
+            const arrayEditado=publicacion.map(item=>(
+                item.id===id ? {id:item.id,Fecha:item.Fecha,
+                Comentario: comentario} : item
+            ))
+            setPublicacion(arrayEditado)
+            setModoEdicion(false)
+            setComentario('')
+            setId('')
+
+
+        }catch(error){
+            console.log(error)
+        }
+
+    }
+    const agregar=async(e)=>{
+        e.preventDefault()
+
+        if(!comentario.trim()){
+            console.log('esta vacio')
+            return
+        }
+        try{
+            const nuevoComentario={
+                Comentario: comentario,
+                Fecha: Date.now()
+
+            }
+            const data=await dab.collection('Publicaciones').add(nuevoComentario)
+            setPublicacion([
+                ...publicacion,
+                {
+                    ...nuevoComentario,id:data.id
+                }
+            ])
+            setComentario('');
+
+        }catch(error){
+            console.log(error)
+        }
+    }
     React.useEffect(()=>{
         if(auth.currentUser){
             console.log('existe el usuario');
@@ -74,18 +145,35 @@ const PagPerfil=(props)=>{
                    <div className="container mt-3">
                        <div className="row">
                             <div className="col-md-6">
-                                <form>
+
+                                <form onSubmit={
+                                    modoEdicion ? editar : agregar}>
+                                    <h3 className="text-black-50">
+                                        {
+                                            modoEdicion ? 'Editar Tarea':'Agregar Tarea'
+                                        }
+                                    </h3>
                                     <input type="text" className="form-control mb-2" placeholder="Ponga su publicación aquí"
-                                           onChange={e=>setComentario(e.target.value)}/>
-                                    <button type="submit" className="btn btn-primary">Publicar</button>
+
+                                           onChange={e=>setComentario(e.target.value)} value={comentario}/>
+                                    <button type="submit" className={
+                                        modoEdicion ? 'btn btn-warning btn-block':'btn btn-dark btn-block'
+                                    }>{
+                                        modoEdicion?'Editar':'Publicar'
+                                    }</button>
                                 </form>
                                 <h2 className='text-center'>Publicaciones</h2>
                                 <ul className='list-group'>
                                     {
                                         publicacion.map(item=>(
-                                            <h1 className='list-group-item' key={item.id}>{item.comentario}-{
-                                                item.Fecha
-                                            }</h1>
+                                            <li id="comIn" className='list-group-item bg-dark' key={item.id}>Comentario:{item.Comentario}-Fecha:{
+                                                item.Fecha}
+                                                < button className="btn btn-danger btn-sm float-right"
+                                                onClick={()=>eliminar(item.id)}>Eliminar</button>
+                                                <button className="btn btn-warning btn-sm float-right"
+                                                onClick={()=>activarEdicion(item)}>Editar</button>
+                                            </li>
+
                                         ))
 
                                     }

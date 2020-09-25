@@ -11,7 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0880a660-7dbe-4a2f-94a9-c19750fb4acc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/pages/Formulario-Registro.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Formulario-Registro.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PaginaPerfil.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PaginaPerfil.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PaginaPerfil.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PaginaPerfil.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +95,7 @@
       <workItem from="1600640524454" duration="8634000" />
       <workItem from="1600715565848" duration="1557000" />
       <workItem from="1600950374250" duration="2645000" />
-      <workItem from="1600980046990" duration="33501000" />
+      <workItem from="1600980046990" duration="39061000" />
     </task>
     <servers />
   </component>

@@ -1,8 +1,9 @@
 #contenido{
-
+    width: 70%;
     color: black;
     height: 550px;
-    margin-left: 60%;
+    margin-left: 40%;
+    overflow: scroll;
 
 }
 #infoPerfil{
@@ -11,4 +12,7 @@
     height: 530px;
 
     background-color: #b5afaf;
+}
+#comIn{
+   width: 560px;
 }
