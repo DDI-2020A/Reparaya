@@ -3,14 +3,27 @@ import Footpage from "../components/Footpage";
 import Formulario from "../components/Formulario";
 import Mapa from "../components/Mapa";
 import './Contactanos.css';
-import React, {Component} from "react";
-class Contactanos extends Component {
-    render() {
+import React from "react";
+import {auth} from "../Routers/firebase";
+const Contactanos =()=> {
+    const[firebaseUser,setFirebaseuser]=React.useState(false)
+    React.useEffect(()=>{
+        auth.onAuthStateChanged(user=>{
+            console.log(user)
+            if(user){
+                setFirebaseuser(user)
+            } else{
+                setFirebaseuser(null)
+            }
+        })
+
+    },[])
+
 
         return (
 
                     <div id="Contactanos">
-                        <Navigation/>
+                        <Navigation firebaseUser={firebaseUser}/>
 
 
                         <div>
@@ -48,7 +61,7 @@ class Contactanos extends Component {
 
             }
 
-        }
+
 
         export default Contactanos;
 

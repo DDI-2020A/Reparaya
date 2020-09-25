@@ -1,11 +1,11 @@
-import React,{Component} from 'react';
+import React from 'react';
 import './Tarjetas.css';
 
 
-class Tarjetas extends Component {
+const Tarjetas =()=> {
 
 
-    render(){
+
         return (
 
             <div className="card" >
@@ -24,6 +24,6 @@ class Tarjetas extends Component {
     );
     }
 
-    }
+
 
     export default Tarjetas;

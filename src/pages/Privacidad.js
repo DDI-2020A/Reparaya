@@ -1,15 +1,28 @@
 import Navigation from "../components/Navigation";
 import Footpage from "../components/Footpage";
 import './Privacidad.css';
-import React, {Component} from "react";
-class Privacidad extends Component {
-    render() {
+import React from "react";
+import {auth} from "../Routers/firebase";
+const Privacidad =()=> {
+    const[firebaseUser,setFirebaseuser]=React.useState(false)
+    React.useEffect(()=>{
+        auth.onAuthStateChanged(user=>{
+            console.log(user)
+            if(user){
+                setFirebaseuser(user)
+            } else{
+                setFirebaseuser(null)
+            }
+        })
+
+    },[])
+
 
         return (
 
 
             <div>
-                <Navigation/>
+                <Navigation firebaseUser={firebaseUser}/>
 
 
 
@@ -37,6 +50,6 @@ class Privacidad extends Component {
 
         );
     }
-}
+
 
 export default Privacidad;

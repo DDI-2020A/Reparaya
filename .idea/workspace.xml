@@ -11,13 +11,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0880a660-7dbe-4a2f-94a9-c19750fb4acc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/Formulario-Registro.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Formulario-Registro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Routers/firebase.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Carousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footpage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Mapa.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Mapa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Tarjetas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tarjetas.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Acerca.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Acerca.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Acerca.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Acerca.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Contactanos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contactanos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Formulario-Registro.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Formulario-Registro.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Formulario-Registro.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Formulario-Registro.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Inicio.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Inicio.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Inicio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Inicio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/InicioSesion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/InicioSesion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PaginaPerfil.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PaginaPerfil.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/PaginaPerfil.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PaginaPerfil.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Sesion.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Privacidad.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Privacidad.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +44,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -93,7 +109,13 @@
       <workItem from="1600179135961" duration="6096000" />
       <workItem from="1600306913205" duration="2501000" />
       <workItem from="1600382722762" duration="1410000" />
-      <workItem from="1600447481689" duration="3141000" />
+      <workItem from="1600447481689" duration="3899000" />
+      <workItem from="1600535631304" duration="9178000" />
+      <workItem from="1600622381772" duration="1132000" />
+      <workItem from="1600640524454" duration="8634000" />
+      <workItem from="1600715565848" duration="1557000" />
+      <workItem from="1600950374250" duration="2645000" />
+      <workItem from="1600980046990" duration="24889000" />
     </task>
     <servers />
   </component>

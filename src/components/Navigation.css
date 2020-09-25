@@ -1,6 +1,6 @@
 nav{
     background-color: black;
-    height: 20%;
+    height: 30%;
 }
 nav a{
     position: relative;
@@ -8,22 +8,24 @@ nav a{
     color: white;
 }
 #logo{
+    width: 100px;
+    margin-right: 70%;
     padding-top: 10px;
     padding-left: 30px;
 }
-divbutton{
-    font-family: "Arial Black";
-    border-radius: 20px;
 
-
-}
 #unirse{
     background-color: #3abc06;
 }
 #iniciar{
 
 }
+#contenedor {
+    width: 100%;
+}
 #botones{
-    float: left;
-    padding-left: 60%;
+
+    margin-left: 60%;
+    position: relative;
+
 }

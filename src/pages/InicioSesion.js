@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './InicioSesion.css';
-import { Form, Input, Button, Checkbox } from 'antd';
 import logo from '../logo.png';
-import {Link} from "react-router-dom";
+import {Link,withRouter} from "react-router-dom";
+import {auth} from '../Routers/firebase';
 
-const InicioSesion=()=>{
+const InicioSesion=(props)=>{
+
     const layout = {
         labelCol: {
             span: 8,
@@ -19,43 +20,90 @@ const InicioSesion=()=>{
             span: 16,
         },
     };
+    const [email,setEmail]=useState('');
+    const [contraseña,setContraseña]=useState('');
+    const [error,setError]=useState(null);
+    const [estado,setEstado]=useState(false);
+    const procesarDatos=e=>{
+        e.preventDefault();
+        if(!email.trim()){
+            //console.log("Ingrese contraseña")
+            setError("Ingrese un email");
+            setEstado(true);
+            return
+        }
+        if(!contraseña.trim()){
+            //console.log("Ingrese verificación de contraseña");
+            setError("Ingrese una contraseña");
+            setEstado(true);
+            return
+        }
+        if(estado===false){
+            login();
+        }
+        setEstado(false)
+        setError(null)
+
+    }
 
 
-        const onFinish = (values) => {
-            console.log('Success:', values);
-        };
-        const onFinishFailed = (errorInfo) => {
-            console.log('Failed:', errorInfo);
-        };
+
+        const login=React.useCallback(async()=>{
+            try{
+                const res= await auth.signInWithEmailAndPassword(email,contraseña)
+                console.log(res.user)
+                props.history.push('/perfil');
+                setError('')
+                setContraseña('')
+                setEmail('')
+            } catch(error){
+                console.log(error)
+                if(error.code==='auth/invalid-email'){
+                    setError('Email no valido')
+                }
+                if(error.code==='auth/user-not-found'){
+                    setError('Email no registrado')
+                }
+                if(error.code==='auth/wrong-password'){
+                    setError('Contraseña Incorrecta')
+                }
+
+
+            }
+        },[email,contraseña, props.history])
     return(
 
 
 
 
-
-
             <div id="container">
+
                 <Link to="/">< img src={logo}/></Link>
+                <form onSubmit={procesarDatos}>
+                    {
+                        error && (
+                            <div className="alert alert-primary">
+                                {error}
+                            </div>
+                        )
+                    }
 
-                <Form {...layout} name="basic" initialValues={{remember: true,}} onFinish={onFinish} onFinishFailed={onFinishFailed}>
-                    <Form.Item label="Mail" name="Mail" rules={[{required: true, message: 'Ingrese el Usuario',},]}>
-                        <Input type="mail"/>
-                    </Form.Item>
 
-                    <Form.Item label="Contraseña" name="Contraseña" rules={[{required: true, message: 'Ingrese la Contraseña',},]}>
-                        <Input.Password id="cont" />
-                    </Form.Item>
 
-                    <Form.Item {...tailLayout} name="Recuerdame" valuePropName="checked">
-                        <Checkbox id="check">     Recordar Contraseña</Checkbox>
-                    </Form.Item>
+                    <input type="email" className="form-control mb-2" placeholder="Ingrese su email"
+                           onChange={e=>setEmail(e.target.value)}/>
 
-                    <Form.Item {...tailLayout}>
-                        <Button type="primary" htmlType="submit">
-                            Ingresar
-                        </Button>
-                    </Form.Item>
-                </Form>
+                    <input type="password" className="form-control mb-2" placeholder="Ingrese su contraseña"
+                           onChange={e=>setContraseña(e.target.value)}/>
+
+
+
+
+                    <div>
+                        {/*<Link to="/perfil">*/}<button type="submit" className="btn btn-primary bg-green">Ingresar</button>{/*</Link>*/}
+
+                    </div>
+                </form>
             </div>
 
 
@@ -70,4 +118,4 @@ const InicioSesion=()=>{
 
 
 }
-export default InicioSesion;
+export default withRouter(InicioSesion);

@@ -1,33 +1,62 @@
-import React,{Component} from 'react';
+import React,{Fragment} from 'react';
 import './Navigation.css';
 import logo from '../logo.png';
-import {Link} from "react-router-dom";
+import {Link,withRouter} from "react-router-dom";
+import {auth} from "../Routers/firebase";
+
+
+const Navigation =(props)=> {
+
+    const cerrarSesion=()=>{
+        auth.signOut()
+            .then(()=>{
+                props.history.push('/')
+            })
+
+    }
 
 
 
-const Navigation =()=> {
 
-
-            return(
+    return  (
 
 
 
-                <nav className="navbar navbar-expand-lg navbar-light">
-                    <div >
-                        <a href="/" className="navbar-left" id="logo"><img src={logo}/></a>
-                    </div>
+                <nav className="navbar  navbar-light">
 
-                    <div id="botones">
-                        <form className="form-inline mt-2 mt-md-0 float-right" id="form">
 
-                            <Link to='/FormularioRegistro'><button className="btn btn-outline-success my-2 my-sm-2" type="primary-button">UNIRSE</button></Link>
-                            <a>   </a>
-                            <Link to='/InicioSesion'><button className="btn btn-outline-success my-2 my-sm-2" type="primary-button">INICIA SESION </button></Link>
-                        </form>
+                    <div id="contenedor">
+                        <a href="/" className="navbar-left" ><img id="logo" src={logo}/></a>
+
+
+
+
+                            {props.firebaseUser!==null?(
+                                <Fragment>
+                                    <Link to="/perfil"><button className="btn btn-primary" type="button">PERFIL </button></Link>
+                                <button className="btn btn-primary" type="button"
+                                onClick={()=>cerrarSesion()}>CERRAR SESIÓN </button>
+                                </Fragment>
+
+
+                            ):
+
+
+                          (
+
+                                    <Fragment>
+                                        <Link to='/FormularioRegistro'><button  className="btn btn-primary" type="button">UNIRSE</button></Link>
+                                        <Link to='/InicioSesion'><button  className="btn btn-primary" type="button">INICIA SESION </button></Link>
+                                    </Fragment>
+                                )
+                            }
+
+
                     </div>
 
 
                 </nav>
+
 
 
             );
@@ -36,4 +65,4 @@ const Navigation =()=> {
 
     }
 
-export default Navigation;
+export default withRouter(Navigation);

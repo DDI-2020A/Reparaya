@@ -2,16 +2,30 @@ import Navigation from "../components/Navigation";
 import Carousele from "../components/Carousel";
 import Footpage from "../components/Footpage";
 import './Inicio.css';
-import React, {Component,Link} from "react";
+import React from "react";
+import {withRouter} from "react-router-dom";
+import {auth} from "../Routers/firebase";
 
-class Inicio extends Component {
-    render() {
+const Inicio =()=> {
+    const[firebaseUser,setFirebaseuser]=React.useState(false)
+    React.useEffect(()=>{
+        auth.onAuthStateChanged(user=>{
+            console.log(user)
+            if(user){
+                setFirebaseuser(user)
+            } else{
+                setFirebaseuser(null)
+            }
+        })
+
+    },[])
+
 
         return (
 
 
             <div id="Inicio">
-                <Navigation/>
+                <Navigation firebaseUser={firebaseUser}/>
 
                 <div id="container1">
                     <Carousele/>
@@ -80,6 +94,6 @@ class Inicio extends Component {
 
         );
     }
-}
 
-export default Inicio;
+
+export default withRouter(Inicio);
