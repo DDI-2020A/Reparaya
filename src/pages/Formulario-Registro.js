@@ -12,6 +12,18 @@ const FormularioRegistro =(props)=>{
     const[contraseña2,setContraseña2]=useState('');
     const[error,setError]=useState(null);
     const[estado,setEstado]=useState(false);
+    const[firebaseUser,setFirebaseuser]=React.useState(false)
+    React.useEffect(()=>{
+        auth.onAuthStateChanged(user=>{
+            console.log(user)
+            if(user){
+                setFirebaseuser(user)
+            } else{
+                setFirebaseuser(null)
+            }
+        })
+
+    },[])
 
 
     const procesarDatos=e=>{
@@ -88,7 +100,7 @@ const FormularioRegistro =(props)=>{
     },[ email,contraseña,props.history])
     return(
         <Fragment>
-            <Navigation />
+            <Navigation firebaseUser={firebaseUser}/>
             <div id="container2">
                 <h2 className="text-center">Registro de Nuevo Usuario</h2>
                     <hr/>
